@@ -1,0 +1,1 @@
+f4d88a3f072f003680ce4ebe135c0c7612a0ec20c6d42d86e0efac4d51be56c1  DirectoryStructureGenerator.PresetManager_v1.1_win-x64.zip

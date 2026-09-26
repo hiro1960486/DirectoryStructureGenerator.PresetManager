@@ -1,15 +1,26 @@
-# .NET build outputs
-[Bb]in/
-[Oo]bj/
-/publish/
+# Build outputs
+bin/
+obj/
+publish/
 
-# Application runtime data and logs
-Logs/*.log
-Temp/*
-Preview/*
-Output/*
-
-# IDE and local settings
+# Visual Studio / user settings
 .vs/
 *.user
 *.suo
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.backup_*
+*.previous_*
+*.invalid_*
+
+# Optional local data
+Logs/*
+Output/*
+Preview/*
+Temp/*
+!Logs/.gitkeep
+!Output/.gitkeep
+!Preview/.gitkeep
+!Temp/.gitkeep
