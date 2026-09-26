@@ -1,0 +1,15 @@
+# .NET build outputs
+[Bb]in/
+[Oo]bj/
+/publish/
+
+# Application runtime data and logs
+Logs/*.log
+Temp/*
+Preview/*
+Output/*
+
+# IDE and local settings
+.vs/
+*.user
+*.suo
