@@ -19,7 +19,7 @@ public sealed class Preset : INotifyPropertyChanged {
  public OrganizerSettings Organizer { get; set; } = new();
  [JsonIgnore] public string Badges => (Default?"◎":"")+(Favorite?"★":"")+(Quick?"⚡":"");
  [JsonIgnore] public string SourceDisplay => string.IsNullOrWhiteSpace(Source)?"実行時に選択":Source;
- [JsonIgnore] public string OutputDisplay => string.IsNullOrWhiteSpace(Output)?"APP既定":Output;
+    [JsonIgnore] public string OutputDisplay => string.IsNullOrWhiteSpace(Output)?"アプリの既定値":Output;
  [JsonIgnore] public string IncludedExtensionsDisplay => Filters.IncludedExtensions.Count==0?"すべて":string.Join(", ",Filters.IncludedExtensions);
  [JsonIgnore] public string ExcludedDirsDisplay => Filters.ExcludedDirs.Count==0?"なし":string.Join(", ",Filters.ExcludedDirs);
  [JsonIgnore] public string ExcludedExtensionsDisplay => Filters.ExcludedExtensions.Count==0?"なし":string.Join(", ",Filters.ExcludedExtensions);

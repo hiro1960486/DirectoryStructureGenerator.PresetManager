@@ -8,6 +8,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>DirectoryStructureGenerator.PresetManager</AssemblyName>
     <RootNamespace>DirectoryStructureGenerator.PresetManager</RootNamespace>
+    <Version>1.1.2</Version>
   </PropertyGroup>
   <ItemGroup>
     <None Update="Config\presets.csv">

@@ -1,18 +1,20 @@
-# DirectoryStructureGenerator.PresetManager
+# Directory Structure Generator - Preset Manager
 
 ![Preset Manager product icon](docs/images/product-icon.png)
 
 プリセットCSVを管理する Windows デスクトップアプリです。Directory Structure Generator の整理コピー設定を登録・比較し、プリセットCSVの保存先を切り替えられます。
 
-**アプリ版:** 1.1  
-**対応OS:** Windows 10 / 11 (x64)  
+**アプリ版:** 1.1.2
+
+**対応OS:** Windows 10 / 11 (x64)
+
 **開発環境:** .NET 8 / WPF
 
 ## ダウンロード
 
 [Download Latest Release](https://github.com/hiro1960486/DirectoryStructureGenerator.PresetManager/releases/latest)
 
-Releaseから `DirectoryStructureGenerator.PresetManager_v1.1_win-x64.zip` をダウンロードし、フォルダーへ展開して `DirectoryStructureGenerator.PresetManager.exe` を起動してください。配布ZIPには実行に必要なファイル一式が含まれています。.NETの別途インストールは不要です。
+Releaseから `DirectoryStructureGenerator.PresetManager_v1.1.2_win-x64.zip` をダウンロードし、フォルダーへ展開して `DirectoryStructureGenerator.PresetManager.exe` を起動してください。配布ZIPには実行に必要なファイル一式が含まれています。.NETの別途インストールは不要です。
 
 ## 主な機能
 
@@ -21,6 +23,15 @@ Releaseから `DirectoryStructureGenerator.PresetManager_v1.1_win-x64.zip` を�
 - CSVの保存先をアプリ内、別ドライブ、OneDrive、NASなどへ変更
 - 保存先変更時に、現在のデータをコピー、既存CSVを使用、空CSVを作成から選択
 - 上書き前の既存CSVバックアップと、一時ファイル経由の設定保存
+- 表示順は数字を入力して Enter で確定します。入力中の数字では設定が変わりません。
+- 画面上の用語を Directory Structure Generator と合わせ、「対象フォルダー」「出力先」に統一
+
+## プリセットの編集
+
+1. 一覧からプリセットを選び、「編集」を押します。
+2. 「基本情報」で名称、メモ、順番を確認します。順番の数字を変更したら Enter を押して確定します。
+3. 「実行情報」では「対象フォルダー」と「出力先」を指定できます。対象フォルダーが空欄なら実行時に選び、出力先が空欄なら Directory Structure Generator の既定値を使います。
+4. 「重複チェックして保存」を押して確定します。
 
 ## 保存先を変更するとき
 

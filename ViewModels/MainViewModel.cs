@@ -17,6 +17,7 @@ public sealed class MainViewModel:INotifyPropertyChanged {
  public IReadOnlyList<MatchResult> Matches=>Selected==null?new List<MatchResult>():_compare.Find(Selected,Presets).Where(x=>x.Score>=40).Take(5).ToList();
  public string ExactMessage=>Matches.FirstOrDefault(x=>x.Exact) is MatchResult m?$"「{m.Preset.Name}」と完全一致":"完全一致なし";
  public void Replace(IEnumerable<Preset> items){Presets.Clear();foreach(var p in items.OrderBy(x=>x.Order))Presets.Add(p);Selected=Presets.FirstOrDefault(x=>x.Default)??Presets.FirstOrDefault();}
+ public void SortPresetsPreservingSelection(Preset selected){var ordered=Presets.OrderBy(x=>x.Order).ToList();Presets.Clear();foreach(var preset in ordered)Presets.Add(preset);Selected=selected;RefreshComputed();}
  public void RefreshComputed(){On(nameof(Matches));On(nameof(ExactMessage));View.Refresh();}
  public event PropertyChangedEventHandler? PropertyChanged;void On([CallerMemberName]string? n=null)=>PropertyChanged?.Invoke(this,new(n));
 }
