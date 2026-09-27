@@ -80,8 +80,7 @@ public partial class MainWindow : Window
         {
             var index = _vm.Presets.IndexOf(original);
             _vm.Presets[index] = clone;
-            _vm.Selected = clone;
-            _vm.RefreshComputed();
+            _vm.SortPresetsPreservingSelection(clone);
         }
     }
 
